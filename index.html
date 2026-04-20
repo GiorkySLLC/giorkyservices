@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Giorky Services LLC | AC, Plumbing, Electrical in Miami</title>
+    <link rel="icon" type="image/x-icon" href="favicon.PNG">
+    <meta name="description" content="Professional services in Miami: AC repair, plumbing, electrical, remodeling, and construction. Certified technician. Call now.">
+    <meta name="keywords" content="AC repair Miami, plumbing Miami, electrical Miami, remodeling Miami, construction Miami">
+    <meta name="author" content="Giorky Services LLC">
+    <style>
+        /*RESET Y ESTILOS BASE*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background-color: #ffffff;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*Boton flotante de whatsapp*/
+.btn-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+.btn-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+header {
+    background-color: #0B2B5B;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.logo p {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #1E6BB8;
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/*HERO SECTION*/
+.hero {
+    background-color: #0B2B5B;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.btn-primary {
+    background-color: #1E6BB8;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #155a9c;
+    transform: scale(1.05);
+}
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid #1E6BB8;
+}
+.btn-secondary:hover {
+    background-color: #1E6BB8;
+    transform: scale(1.05);
+}
+
+/*SECCION SERVICIOS*/
+
+.services, .why, .gallery, .videos, .contact {
+    padding: 60px 0;
+}
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #0B2B5B;
+}
+.services-grid, .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.services-card, .why-item {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+.services-card:hover, .why-item:hover {
+    transform: translateY(-5px);
+}
+.icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.services-card h3, .why-item h3 {
+    margin-bottom: 15px;
+    color: #0B2B5B;
+}
+.why {
+    background-color: #F4F7FA;
+}
+/*galeria*/
+.gallery-grid, videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+.gallery-grid img:hover {
+    transform: scale(1.02);
+}
+/*videos*/
+.videos-grid video {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    max-height: 500px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+/*contact*/
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+.contact-item {
+    background-color: #F4F7FA;
+    padding: 25px;
+    border-radius: 15px;
+}
+.contact-item a {
+    color: #1E6BB8;
+    text-decoration: none;
+    font-weight: bold;
+}
+.contact-item a:hover {
+    text-decoration: underline;
+}
+/*footer*/
+footer {
+    background-color: #0B2B5B;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+}
+/*responsive*/
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+    .videos-grid video {
+        max-height: 200px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    nav ul.show {
+        display: flex;
+    }
+    header .container {
+        flex-wrap: wrap;
+    }
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+    </style>
+</head>
+<body>
+    
+    <!--Floating whatsapp button (always visible)-->
+    <a href="https://wa.me/17864433152" target="_blank" class="btn-whatsapp" aria-label="WhatsApp">
+        <img src="whatsapp.png" alt="WhatsApp" width="35" height="35">
+    </a>
+
+    <!--HEADER / NAVIGATION-->
+    <header>
+        <div class="container">
+            <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+                <img src="favicon.PNG" alt="GS" style="width: 90px; height: 90px;">
+                <div>
+                    <h1>Giorky Services LLC</h1>
+                    <p>Miami, Florida</p>   
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Menu">…</button>
+        </div>
+    </header>
+
+    <!--HERO SECTION (COVER)-->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Solutions for you home in Miami</h2>
+            <p>AC · Plumbing · Electrical · Remodeling · Construction</p>
+            <div class="hero-buttons">
+                <a href="tel:+17864433152" class="btn btn-primary">📞CALL NOW</a>
+                <a href="https://wa.me/17864433152" target="_blank" class="btn btn-secondary">💭 WHATSAPP</a>
+            </div>
+        </div>
+    </section>
+
+    <!--SERVICES SECTION-->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Professional Services</h2>
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <div class="icon">❄</div>
+                    <h3>Air Aconditioning</h3>
+                    <p>Installation, repair, and maintenance of residential and commercial AC.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🔧</div>
+                    <h3>Plumbing</h3>
+                    <p>Leak repair, pipe and faucet installation.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">⚡</div>
+                    <h3>Electrical</h3>
+                    <p>Minor electrical work, circuit repair and installations.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🏠</div>
+                    <h3>Remodeling</h3>
+                    <p>Apartament and home remodeling.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🔨</div>
+                    <h3>Construction</h3>
+                    <p>Construction work and structural repairs.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🎨</div>
+                    <h3>Painting</h3>
+                    <p>Interior and exterior painting for homes and businesses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--WHY CHOOSE GIORKY SECTION-->
+    <section class="why">
+        <div class="container">
+            <h2 class="section-title">Why choose Giorky?</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="icon">✅</div>
+                    <h3>Certified Technician</h3>
+                    <p>HVAC/R Technician with universal certification.</p>
+                </div>
+
+                <div class="why-item">
+                    <div class="icon">🚚</div>
+                    <h3>Transport & Tools</h3>
+                    <p>Own vehicle and tools available.</p>
+                </div>
+
+                <div class="why-item">
+                    <div class="icon">⚡</div>
+                    <h3>Fast Response</h3>
+                    <p>Quick service throughout the Miami area.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--PHOTO GALLERY SECTION-->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title"> Our Work</h2>
+            <div class="gallery-grid" id="gallery-grid">
+                <!--photos will be loaded manually or with javascript-->
+            </div>
+        </div>
+    </section>
+
+    <!--VIDEOS SECTION-->
+    <section class="videos">
+        <div class="container">
+            <h2 class="section-title">Work Videos</h2>
+            <div class="videos-grid" id="videos-grid">
+                <!--Videos will be loaded manually or with javascript-->
+            </div>
+        </div>
+    </section>
+
+    <!--CONTACT SECTION-->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="icon">📞</div>
+                    <h3>Phone</h3>
+                    <a href="tel:+17864433152">(786) 443-3152</a>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/17864433152" target="_blank">(786) 443-3152</a>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="mailto:chavelyleanet@gmail.com">chavelyleanet@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Miami, Florida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Giorky Services LLC - Miami, Florida. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        //menu movil
+const menuToggle = document.querySelector('.menu-toggle');
+const navUl = document.querySelector('nav ul');
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        navUl.classList.toggle('show');
+    });
+}
+//cargar fotos automaticamente (foto1.jpg, foto2.jpg.... hasta la ultima)
+const galleryGrid = document.getElementById('gallery-grid');
+if (galleryGrid) {
+    for (let i = 1; i <= 14; i++) {
+        const img = document.createElement('img');
+        img.src = `foto${i}.JPG`;
+        img.alt = `Work photo ${i}`;
+        img.onerror = () =>
+        img.style.display = 'none'; //oculta si no existe
+
+        galleryGrid.appendChild(img);
+    }
+}
+//cargar videos automaticamente (video1.mp4, video2.mp4.... hasta el ultimo)
+const videosGrid = document.getElementById('videos-grid');
+if (videosGrid) {
+    for (let i = 1; i <= 3; i++) {
+        const video = document.createElement('video');
+        video.controls = true;
+        video.width = 320;
+
+        const source = document.createElement('source');
+        source.src = `video${i}.MP4`;
+        source.type = 'video/mp4';
+
+        video.appendChild(source);
+        video.onerror = () => video.style.display = 'none';
+        videosGrid.appendChild(video);
+    }
+}
+    </script>
+</body>
+</html>
